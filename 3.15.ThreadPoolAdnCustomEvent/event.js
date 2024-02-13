@@ -35,6 +35,7 @@ const listener = ()=>{
     console.log('event5');
 }
 myEvent.on('event5',listener);
+
 //이벤트에 존재하는 해당 콜백함수를 모두 지움.
 myEvent.removeListener('event5',listener);
 myEvent.emit('event5');
