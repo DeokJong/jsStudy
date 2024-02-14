@@ -1,0 +1,31 @@
+{
+  "name": "npmtest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+
+  //스크립트는 실행할 명령어들
+  "scripts": {
+    //npm run test는 test에 해당하는 명령어가 실행됨
+    "test": "echo \"Error: no test specified\" && exit 1",
+    //npm run start는 start에 해당하는 명령어가 실행됨
+    "start": "node index"
+  },
+  "author": "Deokjong",
+  "license": "MIT"
+}
+
+의존성에서 dependecies는 배포환경에서까지 쓰이는 것
+devDependencies는 개발 환경에서만 쓰이는것
+데브 옵션은 다음과 -D를 추가하여 적용되며 다음과 같은 명령어로 설치됨
+npm i -D express
+"dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6"
+  },
+  "devDependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  }
+
+어떤 패키지가 다른패키지의 dependencies를 갖고 있을때 그 모든 의존성을 다운받음

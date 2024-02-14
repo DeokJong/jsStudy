@@ -4,7 +4,7 @@ const url = require('url');
 const qs = require('querystring');
 
 const parseCookies = (cookie = '')=>{
-    cookie
+    return cookie
         .split(';')
         .map(v => v.split('='))
         .reduce((acc,[k,v])=>{
@@ -14,5 +14,5 @@ const parseCookies = (cookie = '')=>{
 }
 
 const server = http.createServer(async (req,res)=>{
-    const cookie = parseCookies(req.headers.cookie);
+    const cookies = parseCookies(req.headers.cookie);
 })
