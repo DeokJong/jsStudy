@@ -1,0 +1,6 @@
+배포법
+npm publish
+
+배포 지우기
+npm unpublish
+할때 --force를 붙여야 작동함

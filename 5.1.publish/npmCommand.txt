@@ -1,0 +1,14 @@
+npm update 버전 업데이트
+npm outdated 어떤 패키지의 기능 변화가 생겼는지 확인가능
+npm uninstall "module_name" 모듈 제거 npm rm "module_name" 과 동일함
+npm search "검색어" npm 사이트에서 검색
+npm info "검색어" 해당 검색어에 해당하는 모듈의 상세내용 볼 수 있음
+npm adduser npm에 로그인 하기 위한 명령어
+npm whoami 누구로 로그인 되어있는지 확인 가능
+npm logout npm로그아웃
+npm version "(major/minor/patch)" package.json의 버전을 올림.
+npm deprecate [패키지명][버전] [메세지] 패키지를 설치할 때 경고 메세지를 띄우게함
+npm publish 만든 패키지를 배포
+npm unpublish 자신이 만든 패키지를 배포 중단(72시간 내에만 가능)
+npm ls 어떤 패키지를 사용중인지 띄워줌
+기타 명령어는 npm docs 확인

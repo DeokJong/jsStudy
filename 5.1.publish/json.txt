@@ -1,0 +1,61 @@
+npm init이 시작임 이 명령어로 json 파일이 생성됨
+
+{
+  "name": "npmtest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+
+  //스크립트는 실행할 명령어들
+  "scripts": {
+    //npm run test는 test에 해당하는 명령어가 실행됨
+    "test": "echo \"Error: no test specified\" && exit 1",
+    //npm run start는 start에 해당하는 명령어가 실행됨
+    "start": "node index"
+  },
+  "author": "Deokjong",
+  "license": "MIT"
+}
+
+의존성에서 dependecies는 배포환경에서까지 쓰이는 것
+devDependencies는 개발 환경에서만 쓰이는것
+데브 옵션은 다음과 -D를 추가하여 적용되며 다음과 같은 명령어로 설치됨
+npm i -D express
+
+"dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6"
+  },
+  "devDependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  }
+
+어떤 패키지가 다른패키지의 dependencies를 갖고 있을때 그 모든 의존성을 다운받음
+
+배포할때 node_modules는 사용하지 않음.
+
+package.json이 있는 폴더에서 npm i 를 칠 경우 의존성이 모두 다시 깔림
+
+-g 옵션은 global 옵션임.
+이는 dependencies에 기록이 안됨. 글로벌 옵션은 명령어로 사용 가능함.
+의존성에 기록이 안되기에 보통 기피되는 명령어임.
+글로벌 옵션은 최대한 기피함
+
+그러면 명령어 처럼 사용할려면 npx를 앞에 사용하면됨
+
+그러면 package-lock.json 은 왜 필요한가?
+    정확한 버전을 기록을 함. 모듈의 의존성들의 버전까지 모두 정확하게 기록함. 버전을 고정을 시켜서 변동을 최대한 없이 함.
+
+SemVer 버저닝
+00.00.00 표기 방식
+ex) 1.6.4
+왼쪽 자릿수로 갈수록 변동 사항이 매우 많아짐. 그렇기에 보통 첫번째 자리는 고정을 시킴.
+그렇기에 dependencies에 ^는 첫번째 자리는 고정시킨다는 의미. ~는 두번째 자리까지 고정시킨다는 의미. 아무것도 없으면 세번째 자리까지 고정
+
+버전에 이상이하 초과 미만 부등호도 사용 가능함. 실제로 잘 사용하지 않음
+@lastest는 최신을 의미
+@next는 최신 배포판 사용가능을 의미함 그러나 이는 불안정함.
+
+npm i express@3 을 치면 3중에서 가장 최신버전 설치
+npm i express@lastest를 치면 최신 버전 설치
