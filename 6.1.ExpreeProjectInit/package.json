@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app"
+    "start": "nodemon app",
+    "install": "npm i -D nodemon && npm i express"
   },
   "author": "",
   "license": "MIT",
